@@ -1,0 +1,1007 @@
+$select-color:#499A18
+@mixin common-text
+    font-family: 'Inter'
+    font-style: normal
+    font-weight: 400
+    font-size: 1.25rem
+@mixin title-text
+    font-family: Inika
+    font-weight: 400
+    font-size: 2.5rem
+    line-height: calc(52.12/40*100%)
+//@mixin adaptive-title-text
+//    font-family: Inika
+//    font-weight: 400
+//    font-size: 2.188rem
+//    line-height: calc(45.61/35*100%)
+
+html 
+    scroll-behavior: smooth
+a
+    text-decoration: none
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+    font-family: 'Inika', serif
+    font-family: 'Inter', sans-serif
+    font-weight: 400
+    font-size: 16px
+
+.body._lock //Для блокировки страницы, во время открытия меню
+    overflow: hidden
+
+.background_container 
+    background-color: #EDF2EC
+
+
+.wrapper 
+    max-width: 1360px
+    margin: 0 auto
+
+.header__container
+    display: flex
+    justify-content: space-between
+    .logo 
+        margin-top: 44px
+        margin-left: 89px
+        .title
+            font-size: 16px
+            font-weight: 400
+            font-family: 'Inika', serif
+            color: #000000
+            line-height: 130%
+            letter-spacing: 0.04em
+.logo:after
+    position: relative
+    right: 24px
+    bottom: 35px
+    content: ""
+    display: block
+    background: url("../../assets/icons/logo_vector_name_plants.svg") no-repeat
+    width: 20px
+    height: 20px
+    margin: 0 6px 0 0
+
+.title_burger
+    display: none
+
+.navigation 
+    margin-top: 48px
+    margin-right: 71px
+    .menu 
+        display: flex
+        font-family: 'Inika'
+        font-style: normal
+
+        .menu__item 
+            font-size: 17px
+            list-style-type: none
+            margin-left: 1px
+            .menu__link 
+                font-size: 17px
+                font-family: 'Inika'
+                line-height: 322%
+                color:#010201
+                list-style: none
+                font-weight: 400
+                margin-right: 1px
+            .menu__link:hover
+                font-weight: 600
+            .menu__link--active
+                font-size: 17px
+                color: #E06733
+                line-height: 322%
+                font-weight: 700
+                font-family: 'Inika'
+        .menu__item:not(:last-child):after 
+            content: ''
+            margin-right: 44px
+.welcome 
+    margin-top: 40px
+    padding-bottom: 96px
+.welcome__container 
+    display: flex
+
+.welcome__text 
+    color: #717171
+    margin-top: 57px
+    margin-left: 210px
+    margin-right: 35px
+    .welcome__title 
+        font-family: 'Inter'
+        font-style: normal
+        font-weight: 700
+        font-size: 2.85rem
+        line-height: 111%
+        letter-spacing: 0.01rem
+
+    .selection_text 
+        color: $select-color
+        font-family: 'Inter'
+        font-style: normal
+        font-weight: 700
+        font-size: 2.85rem
+        line-height: 111%
+        letter-spacing: 0.01rem
+
+    .welcome__subtitle
+        max-width: 534px
+        margin-top: 43px
+        line-height: 175%
+        @include common-text
+
+    .welcome_button
+        width: 158.65px
+        height: 44px
+        border: 2px solid #E06733
+        background-color: rgba(0,0,0,0)
+        border-radius: 10px
+        margin-top: 46px
+        cursor: pointer
+        transition: all 500ms ease
+    .welcome_button:hover
+        background-color: #E06733
+        color: white
+
+.welcome__img 
+    margin-left: 60px
+    margin-top: -4px
+
+
+/*-----------------------ABOUT-------------------*/
+.about 
+    background-color: white
+
+.about_container
+    display: flex
+    justify-content: space-around
+    padding-top: 80px
+    padding-bottom: 103px
+
+    .about_img 
+        margin-left: 10px
+        max-width: 464px
+        
+
+    .about_info 
+        
+        .page_title
+            margin-top: 70px
+            color: #E06733
+            @include title-text
+            .selection_text
+                color: $select-color
+                font-family: Inika
+                font-size: 2.5rem
+
+
+        .about_text
+            max-width: 605px
+            margin-top: 40px
+            margin-left: -2px
+
+            line-height: 149%
+            @include common-text
+    
+
+/*--------------services PROJECTS-------------------*/
+
+.services
+    padding-top: 36px
+    padding-bottom: 119px
+    .services_container
+
+        .services_head
+            display: flex
+
+            .services_title
+                @include title-text
+                color: $select-color
+                margin-left: 70px
+                max-width: 306px
+                margin-right: 120px
+                
+            .services_buttons
+                
+                .services_btn
+                    font-family: Inika
+                    font-size: 20px
+                    width: 161px
+                    height: 50px
+                    border: 1px solid #E06733
+                    color: #E06733
+                    background-color: rgba(0,0,0,0)
+                    border-radius: 10px
+                    margin: 29px 18px 0 17px
+                    cursor: pointer
+                    transition: all 500ms ease
+                .services_btn:hover
+                    background-color: #E06733
+                    color: white
+                .services_btn.active
+                    background-color: #E06733
+                    color: white
+
+.services_body
+    margin-left: 70px
+    margin-top: 86px
+    display: flex
+    flex-wrap: wrap
+    gap: 55px 115px
+    .services_card.active
+        filter: blur(2px)
+    .services_card 
+        width: 20.625rem
+        height: 28.125rem
+        border: 1px solid #E3E1D5
+        border-radius: 20px
+        .card_img
+            border-radius: 20px 20px 0px 0px
+            width: 20.563rem
+        .card_info 
+            text-align: center
+            
+            .card_title 
+                margin-top: 8px
+                color: #E06733
+                font-weight: 700
+                font-size: 20px
+                line-height: 100%
+            .card_text 
+                margin-top: 15px
+                font-weight: 400
+                font-size: 16px
+                line-height: 100%
+
+
+/*-------------------------Prices--------------------------*/
+.prices 
+    background-color: white
+    padding: 40px 40px 17px 180px
+    .prices_container
+        display: flex
+        justify-content: space-between
+        max-width: 1222px
+        /*--------Левая часть блока------------*/
+        .prices_left 
+
+            .prices_buttons
+                
+                border: 1px solid #D9D9D9
+                border-radius: 20px
+                padding-top: 17px
+                margin-top: 62px
+                .accord__item
+                    margin: 16px 41px 32px 41px
+                    .accord__head
+                        width: 250px
+                        height: 50px
+                        font-weight: 700
+                        font-size: 20px
+                        background-color: #EDF2EC
+                        border-radius: 20px  
+                        border: 0 
+                        padding-left: 15px
+                        text-align: left
+                        cursor: pointer
+
+                    .accord__head:hover
+                        background-color: #D6E7D2
+                    .accord__head:before
+                        position: relative
+                        left: 178px
+                        top: 5px
+                        content: ""
+                        display: block
+                        background: url("../../assets/icons/accordion_btn.svg") no-repeat
+                        width: 16px
+                        height: 16px
+                        float: left
+                        margin: 0 6px 0 0
+                    .accord__head.active
+                            border-radius: 20px 20px 0 0
+                            background: #D6E7D2
+                    .accord__head:before-active
+                        transform: rotate(90)
+                    .accord__body.active
+                            display: block
+                    .accord__body
+                        display: none
+                        background: #D6E7D2
+                        padding: 0 46px 12px 40px
+                        border-radius: 0 0 20px 20px
+                        transition: display 1s ease-out
+                        max-width: 250px
+                        .accord__description
+                            margin: 0
+                            padding-top: 6px
+                            padding-bottom: 6px
+                            border-top: 0.5px solid #AEA1A1
+                            font-family: "Inter", serif
+                            font-size: 10px
+                            font-style: normal
+                            font-weight: 300
+                            line-height: 10px
+                            color: #717171
+                        .accord__text
+                            margin: 0
+                            padding-bottom: 12px
+                            font-family: "Inter", serif
+                            font-size: 12px
+                            font-style: normal
+                            font-weight: 400
+                            line-height: 20px
+                            color: #000000 
+                            span
+                                font-size: 12px
+                                font-style: normal
+                                font-weight: 700
+                                line-height: 20px
+                                color: #E06733
+                        .accord__button
+                            max-width: 86px
+                            background: #FFFFFF
+                            border-radius: 10px
+                            cursor: pointer
+                            margin: 0
+                            padding: 3px 20px
+                            font-family: "Inter", serif
+                            font-size: 14px
+                            font-style: normal
+                            font-weight: 700
+                            line-height: 20px
+                            color: #717171
+                    
+/*------Правая часть блока-------------*/
+.prices_title 
+    font-weight: 700
+    font-size: 40px
+    line-height: 100%
+    max-width: 452px
+    line-height: 125%
+    letter-spacing: 0.3px
+    margin-top: 3px
+
+
+.prices_right 
+    display: flex
+    flex-direction: column
+    text-align: right
+    max-width: 452px
+
+    .prices_contact_btn
+        font-family: Inika
+        font-size: 20px
+        width: 161px
+        height: 50px
+        border: 1px solid #E06733
+        color: #E06733
+        background-color: rgba(0,0,0,0)
+        border-radius: 10px
+        cursor: pointer
+        margin-top: 42px
+        margin-left: 290px
+        transition: all 500ms ease
+    .prices_contact_btn:hover
+        background-color: #E06733
+        color: white
+
+            
+    .prices_img
+
+        margin-left: 167px
+        margin-top: 1px
+
+.selection_text 
+    color: $select-color
+    font-weight: 700
+    font-size: 2.5rem
+
+/*----------------------Contact-----------------------*/
+.contact
+    background-color: #EDF2EC
+    .contact_container
+        display: flex
+        padding-top: 2.75rem
+        padding-left: 4.375rem
+        .contact_title 
+            font-family: 'Inika'
+            font-weight: 700
+            font-size: 2.5rem
+            line-height: calc(52/40*100%)
+            color: #499A18
+            padding-left: 7rem
+            margin-top: 1.063rem
+        .contact_select
+            margin-top: 102px
+            margin-left: 70px
+
+        
+        .select-drop-down_btn
+            display: flex
+            justify-content: space-between
+            align-items: center
+            padding: 5px 35px 5px 20px
+            background: #D6E7D2
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+            border-radius: 0px
+            transition: all 0.3s linear
+            cursor: pointer
+            width: 450px
+            height: 50px
+            .contact_icon
+                background-image: url("../../assets/icons/Ellipse5.svg")
+                display: block
+                width: 16px
+                height: 16px
+            .contact_icon.active
+                background-image: url("../../assets/icons/contact-us-select-open.svg")
+                width: 16px
+                height: 16px
+        .select-drop-down_btn.active
+            background: #C1E698
+            box-shadow: none
+
+
+
+
+.drop-down__list
+    height: 0
+    visibility: hidden
+    background-color: #DCE9D9
+    padding: 27px 50px 31px 26px
+.drop-down__list.active
+    height: auto
+    visibility: visible
+.drop-down__city 
+    font-family: "Inter", serif
+    font-size: 16px
+    font-style: normal
+    font-weight: 400
+    line-height: 40px
+    color: #44b300
+    cursor: pointer
+    margin-bottom: 12px
+    border-bottom: 1px solid #D9D9D9
+.drop-down__city:last-child 
+    margin-bottom: 0
+.drop-down__city:hover 
+    border-bottom: 1px solid #717171
+    color: #717171
+.cards__item 
+    display: none
+    border: 1px solid #000
+    border-radius: 20px
+.cards__item.active 
+    display: block
+.cards__text 
+    display: flex
+    padding: 17px 23px 24px 23px
+    font-family: "Inter", serif
+    font-size: 16px
+    font-style: normal
+    font-weight: 400
+    line-height: 40px
+.cards__list
+    padding-right: 10px
+.cards__info
+    color: #717171
+.list-item 
+    margin: 0
+.info-item 
+    margin: 0
+.cards__button-link 
+    display: block
+    width: 122px
+    padding: 7px 29px
+    border: 1px solid #E06733
+    border-radius: 5px
+    margin: 0 auto 32px auto
+    text-align: center
+    text-decoration: none
+    font-family: "Inika", sans-serif
+    font-size: 14px
+    font-style: normal
+    font-weight: 700
+    line-height: 20px
+    color: #717171
+    transition: all 0.5s ease 0s
+.cards__button-link:hover
+    background-color: #E06733
+    color: white
+    
+
+/*----------------------Footer--------------------------*/
+.footer
+    background-color: white
+.footer_container
+    display: flex
+    justify-content: space-between
+    padding: 40px 70px
+.footer_date
+    font-family: Inter
+    font-style: normal
+    font-weight: 400
+    font-size: 20px
+    line-height: 250%
+    color: black
+
+.footer_github
+    color: black
+    font-size: 20px
+.footer_rss
+    font-family: 'Inter'
+    font-weight: 400
+    font-size: 20px
+    line-height: 250%
+    color: black
+    margin-left: 37px
+
+.footer_icons
+    padding-top: 8px
+
+.footer_icn
+    width: 32px
+    height: 32px
+    margin-left: 15px
+    cursor: pointer
+
+@media screen and (max-width: 1289px)
+    .welcome__text 
+        margin-left: 100px
+        width: 50%
+    .img__leafs
+        width: 100%
+        margin-top: 100px
+    
+    /*-------About--------*/
+    .about_info 
+        margin-left: 40px
+        width: 80%
+    .about_plant
+        width: 100%
+    .about_img
+        margin-right: 10px
+    /*------Services-------*/
+    .services_head
+        display: flex
+        flex-direction: column
+
+    .services_buttons
+        margin-left: 50px
+
+    .services_body
+        justify-content: center
+    /*---------Prices--------*/
+    .prices
+        padding-left: 120px
+    .prices_right
+        margin-right: 40px
+    .prices_img
+        width: 50%
+    /*------Contact----------*/
+    .contact
+        .contact_container
+            display: flex
+            flex-direction: column
+            align-items: center
+            padding-left: 0px
+    .contact .contact_container .contact_title
+        margin-left: 0px
+        padding-left: 0px
+
+    .contact_woman
+        width: 30%
+        order: 3
+        margin-left: 50px
+        margin-top: 80px
+
+    .contact__text
+        padding-bottom: 14px
+
+@media screen and (max-width: 960px)
+    /*---------HEADER------------*/
+    .navigation
+        margin-top: 34px
+        margin-right: 55px
+    .header__container
+        .logo
+            margin: 40px 0px 0px 70px 
+    .menu__item:not(:last-child):after 
+        content: ''
+        display: none
+    .menu__item
+        padding-left: 43px
+    /*-------WELCOME------------*/
+    .welcome__img
+        display: none
+    .welcome__text
+        margin-top: 18px
+        margin-left: 50px
+        .welcome__title
+            font-size: 2.188rem
+            line-height: 140%
+        .selection_text
+            font-size: 2.188rem
+        .welcome__subtitle
+            font-size: 1rem
+            line-height: calc(25/16*100%)
+            margin-top:35px
+            margin-left: 5px
+            max-width: 341px
+        .welcome_button
+            margin-top: 40px
+    /*--------ABOUT-------------*/
+    .about_container
+        flex-direction: column
+        align-items: center
+        padding-top: 0px
+        padding-bottom: 57px
+        .about_info
+            margin-left: 0
+            .page_title
+                text-align: center
+                margin-top: 40px
+                font-size: 2.188rem
+                letter-spacing: 0.001px
+                .selection_text
+                    font-size: 2.188rem
+                    line-height: 90%
+                    letter-spacing: 0.001px
+            .about_text
+                margin-left: -28px
+                padding-top: 10px
+                max-width: 668px
+    .about_plant
+        max-width: 250px
+        margin-top: 70px
+        
+    
+    /*-------Services----------*/
+    .services
+        padding-bottom: 70px
+        .services_container .services_head .services_title
+            font-size: 2.188rem
+            margin-top: 20px
+            margin-left: 50px
+        .services_buttons
+            margin-left: 30px
+            margin-top: 20px
+        .services_body
+            margin-left: 0px
+            margin-top: 38px
+            gap: 38px 105px
+            .services_card 
+                width: 17.5rem
+                .card_img
+                    width:17.5rem
+                    height: 21.875rem
+                .card_info
+                    width: 13.313rem
+                    margin: 0 auto
+                    .card_title
+                        margin-top: 6px
+                    .card_text
+                        text-align: left
+    /*-------Prices-------------*/
+    .prices
+        padding-left: 60px
+        padding-bottom: 65px
+    .prices_left
+        .prices_title
+            margin-top: 0px
+            font-size: 35px
+            margin-left:4px
+        .prices_buttons
+            margin-left: -10px
+            
+    .prices_right
+        .prices_title
+            text-align: center
+            font-size: 25px
+            padding-bottom: 28px
+            margin-top: 105px
+            margin-left: 48px
+            line-height: calc(35/25*100%)
+        .selection_text
+            font-size: 25px
+        .prices_contact_btn
+            margin-top: 0px
+        .prices_img
+            padding-top: 40px
+            margin-left: 6.875rem
+    .prices_right
+        width: 50%
+        .prices_contact_btn
+            margin-left: 10.75rem
+
+    /*------Contact----------*/
+    .contact .contact_container
+        padding: 20px 0px 0px 0px
+        .contact_select
+            margin-left: 0px
+            
+        .contact_woman
+            margin-top: 177px
+            margin-left: 20px
+            max-width: 200px
+    /*-------Footer----------*/
+    .footer_container
+        flex-direction: column
+        text-align: center
+        padding: 14px 0px 10px 0px
+        line-height: 100%
+        .footer_rss
+            margin: -8px 0px 0px 0px
+        .footer_icons
+            margin: 8px 0px 0px -20px
+
+@media screen and (max-width: 767px)
+    /*---------HEADER------------*/
+    .header__burger
+        display: block
+        position: relative
+        width: 40px
+        height: 27px
+        top: 44px
+        right: 19px
+        z-index: 5
+        cursor: pointer
+        transition: all 0.5s ease 0s
+    
+    .burger__second-line
+        position: absolute
+        background-color: #717171
+        left: 0
+        width: 100%
+        height: 2px
+        top:9px
+    .burger__third-line
+        position: absolute
+        background-color: #717171
+        left: 0
+        width: 100%
+        height: 2px
+        top:17px
+    .header__burger:before,
+    .header__burger:after
+        content: ''
+        background-color: #717171
+        position: absolute
+        width: 100%
+        height: 2px
+        left: 0
+        
+    .header__burger:before
+        top:0
+    
+    .header__burger:after
+        bottom:0
+    .navigation
+        position: fixed
+        top: 0
+        right: -100%
+        width: 320px
+        height: 100%
+        margin: 0
+        background-color:#ebe9e9
+        padding: 158px 30px 30px 30px
+        transition: right 0.6s ease 0s
+        overflow: auto
+        z-index: 5
+    .navigation._active
+        right: 0
+        box-shadow: -350px -150px 9999px rgba(41, 41, 41, 0.6)
+        padding-top: 0px
+    .title_burger
+        display: inline
+        position: relative
+        top: 0px
+        left: -20px
+        
+
+    .header__burger._active
+        transform: rotate(90deg)
+        z-index: 6
+
+    .menu
+        display: flex
+        flex-direction: column
+        align-items: center
+    
+    .menu__item 
+        margin-top: 40px
+    
+    .menu__item:not(:last-child):after 
+        margin: 0
+    
+    .menu__link_active,
+    .menu__link
+        font-size: 32px
+
+    .bg_shadow._active
+        background: rgba(41, 41, 41, 0.6)
+        position: fixed
+        width: 100%
+        height: 100%
+        transition: all 1s ease 0s
+        z-index: 5 
+
+    /*--------Welcome------------*/
+    .welcome
+        margin-top: 0px
+        .welcome__text
+            width: 100%
+
+    /*-------Prices-------------*/
+    .prices_container
+        flex-direction: column
+        align-items: center
+        .prices_left
+            text-align: center
+            .prices_buttons
+                margin: 0
+        .prices_img
+            display: none
+        .prices_title
+            margin: 0 auto
+            padding-top: 20px
+        .prices_right
+            margin: 0
+            width: 100%
+            a
+                margin: 0 auto
+            .prices_title
+                max-width: 260px
+                text-align: center
+
+            .prices_contact_btn
+                margin: 0 auto
+    /*--------Contact----------*/
+    .contact .contact_container 
+        .contact_woman
+            margin-top: 170px
+        .contact_select
+        margin-left: 0px
+        margin-top: 98px
+        .contact_icon
+            margin-left: 200px
+    
+    
+
+@media screen and (max-width: 480px)
+    .header__container
+        .logo
+            margin: 37px 0px 0px 48px
+    /*-------Welcome----------*/
+    .welcome
+        padding-bottom: 30px
+        .welcome__text
+            margin: 8px 0px 0px 30px
+            max-width: 330px
+            .welcome__title
+                font-size: 1.563rem
+                .selection_text
+                    font-size: 1.563rem
+            .welcome__subtitle
+                margin: 20px 0px 0px 0px
+            .welcome_button
+                width: 122px
+                height: 35px
+                margin-top: 30px
+                font-size: 14px
+    /*--------ABOUT-------------*/
+    .about_container
+        padding-bottom: 28px
+        .about_info
+            .page_title
+                margin-top: 30px
+                font-size: 1.563rem
+                .selection_text
+                    font-size: 1.563rem
+            .about_text
+                max-width: 390px
+                font-size: 0.938rem
+                margin: 5px -20px 0px -5px
+                line-height: calc(25/15*100%)
+    .about_container .about_img
+        max-width: 150px
+        .about_plant
+            margin-top: 0px
+    /*--------Services-----------*/
+    .services 
+        padding-top:33px
+        padding-bottom: 26px
+        .services_container 
+            .services_head 
+                .services_title
+                    font-size: 1.563rem
+                    margin: 0px 0px 0px 30px
+                    max-width: 187px
+                .services_buttons
+                    margin-top: 30px
+                    .services_btn
+                        width: 121px
+                        height: 35px
+                        font-size: 15px
+                        margin: 9px 2px 0px 0px
+            .services_body
+                gap: 34px
+    /*--------Prices-----------*/
+    .prices
+        padding-top: 25px
+        padding-bottom: 42px
+        .prices_container
+            .prices_left
+                .prices_title
+                    font-size: 1.563rem
+                    padding-top: 0px
+                .prices_buttons
+                    margin-top: 37px
+                    padding: 20px 20px 32px 20px
+                    .accord__item
+                        margin: 0px 0px 0px 0px
+                        .accord__head
+                            width: 180px
+                            height: 50px
+                            margin: 10px 7px 0px 8px
+                            padding: 0px
+                        .accord__head:before
+                            left: 125px
+                        .accord__body.active
+                            width: 180px
+                            padding: 0px 10px 20px 20px
+                            margin-left: 8px
+                        .accord__body
+                            .accord__description
+                                width: 140px
+                            
+
+            .prices_right 
+                .prices_title
+                    padding: 0px
+                    font-size: 1.25rem
+                    margin-top: 15px
+                    line-height: calc( 35/20*100%)
+                .selection_text
+                    font-size: 1.25rem
+                    line-height: calc( 35/20*100%)
+                a
+                    margin: 0 auto
+                    .prices_contact_btn
+                        width: 121px
+                        height: 35px
+                        font-size: 15px
+                        margin-top: 20px
+
+        
+    /*----------Contacts----------*/
+    .contact 
+        .contact_container 
+            margin-top: 0px
+            .contact_title
+                margin-top: 4px
+                font-size: 1.563rem
+            .contact_select
+                margin-top: 87px
+                .select-drop-down_btn
+                    width: 300px
+                .select-drop-down_btn.active
+                    width: 300px
+                    .contact_icon
+                        margin-left: 70px
+            .contact_woman
+                margin-top: 70px
+                width: 100px
+            .contact_icon
+                margin-left: 100px
+    .cards__item.active
+        width: 300px
+    /*-----------Footer------------*/
+    .footer   
+        .footer_container
+            padding-top: 11px
+            .footer_icons
+                padding-top: 0px
+                margin: 0px
